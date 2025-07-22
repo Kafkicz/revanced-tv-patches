@@ -1,0 +1,28 @@
+{
+  "patchFormatVersion": 3,
+  "name": "remove_ads",
+  "description": "Odstraní načítání reklamních slotů v YouTube TV",
+  "version": "1.0.0",
+  "targets": [
+    {
+      "packageName": "com.google.android.youtube.tv",
+      "versionName": "5.30.304"
+    }
+  ],
+  "patches": [
+    {
+      "name": "block_ad_requests",
+      "description": "Zastaví volání funkce načítající reklamy",
+      "changes": [
+        {
+          "class": "com/google/android/youtube/tv/ads/AdRequestManager",
+          "method": "loadAds",
+          "type": "replace",
+          "instructions": [
+            "return"
+          ]
+        }
+      ]
+    }
+  ]
+}
