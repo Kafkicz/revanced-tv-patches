@@ -1,0 +1,28 @@
+{
+  "patchFormatVersion": 3,
+  "name": "skip_are_you_still_watching",
+  "description": "Automaticky přeskočí hlášku 'Are you still watching?' v YouTube TV",
+  "version": "1.0.0",
+  "targets": [
+    {
+      "packageName": "com.google.android.youtube.tv",
+      "versionName": "5.30.304"
+    }
+  ],
+  "patches": [
+    {
+      "name": "disable_idle_prompt",
+      "description": "Zruší zobrazení výzvy pro neaktivitu uživatele",
+      "changes": [
+        {
+          "class": "com/google/android/youtube/tv/ui/IdleWatcherDialog",
+          "method": "showPrompt",
+          "type": "replace",
+          "instructions": [
+            "return"
+          ]
+        }
+      ]
+    }
+  ]
+}
