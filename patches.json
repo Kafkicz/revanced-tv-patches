@@ -4,16 +4,24 @@
       "id": "skip_are_you_still_watching",
       "name": "Skip 'Are you still watching?'",
       "description": "Automaticky přeskočí hlášku 'Are you still watching?' v YouTube TV",
-      "target": "com.google.android.youtube.tv",
-      "version": "5.30.304",
+      "use":true,
+      "compatiblePackages": {
+      "com.google.android.youtube.tv": [
+        "5.30.304"
+      ]
+      "options": [],
       "patchFile": "skip_are_you_still_watching.patch"
     },
     {
       "id": "remove_ads",
       "name": "Remove ads (YouTube TV)",
       "description": "Odstraní načítání reklamních slotů v YouTube TV",
-      "target": "com.google.android.youtube.tv",
-      "version": "5.30.304",
+      "use":true,
+      "compatiblePackages": {
+      "com.google.android.youtube.tv": [
+        "5.30.304"
+      ]
+      "options": [],
       "patchFile": "remove_ads.patch"
     }
   ]
